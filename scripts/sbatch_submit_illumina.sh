@@ -11,13 +11,6 @@
 
 set -euo pipefail
 
-# ======================================
-# Environment setup
-# ======================================
-# ahs is blocking download nfcore_custom.config at the run time
-# https://raw.githubusercontent.com/nf-core/configs/master/nfcore_custom.config
-#so run the pipeline in offline mode
-export NXF_OFFLINE='true'
 
 # ==========================================================
 # Help & usage
