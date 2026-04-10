@@ -27,9 +27,9 @@ def process_subgroup(consensus_path, depth_path, nextclade_path, samplesheet_pat
             if not cons.empty:
                 cons_df = cons.rename(columns={
                     "#id": "contigid",
-                    "coverage": "consensus_coverage/10x",
-                    "completeness": "consensus_completeness/10x"
-                })[["contigid", "consensus_coverage/10x", "consensus_completeness/10x"]].drop_duplicates()
+                    "coverage": "consensus_coverage",
+                    "completeness": "consensus_completeness"
+                })[["contigid", "consensus_coverage", "consensus_completeness"]].drop_duplicates()
         except Exception as e:
             print(f"⚠ Warning: Failed to read consensus file {consensus_path}: {e}")
 
@@ -127,7 +127,7 @@ def main():
     column_order = [
         "sample_id", "contigid", "subgroup", "clade",
         "input_num_seqs", "trimmed_num_seqs", "dehosted_num_seqs",
-        "consensus_coverage/10x", "consensus_completeness/10x",
+        "consensus_coverage", "consensus_completeness",
         "mapped_reads", "mean_depth"
     ]
     existing_cols = [c for c in column_order if c in master.columns]

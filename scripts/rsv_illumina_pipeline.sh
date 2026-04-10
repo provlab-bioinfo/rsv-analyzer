@@ -371,7 +371,7 @@ run_cmd python "$SCRIPT_DIR/make_summary_report.py" \
 --nextcladeA rsvA/nextclade/nextclade.tsv \
 --consensusB rsvB/all_consensus.rsvB_stats.tsv \
 --depthB rsvB/chromosome_coverage_depth_summary.tsv \
---nextcladeB rsvB/nextclade/nextclade/nextclade.tsv \
+--nextcladeB rsvB/nextclade/nextclade.tsv \
 --samplesheetA ../samplesheet_rsvA.csv \
 --samplesheetB ../samplesheet_rsvB.csv \
 --out rsv_master.tsv
