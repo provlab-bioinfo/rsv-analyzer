@@ -7,7 +7,7 @@ set -euo pipefail
 readonly prod_prog_base="/nfs/APL_Genomics/apps/production"
 readonly deve_prog_base="/nfs/Genomics_DEV/projects/xdong/deve"
 
-readonly path_to_viralrecon="${prod_prog_base}/viralrecon"
+readonly path_to_viralrecon="${prod_prog_base}/viralrecon_pipeline/viralrecon"
 readonly path_to_qc_pipeline="${prod_prog_base}/qcflow_pipeline/nf-qcflow"
 readonly path_to_covflow="${prod_prog_base}/covflow_pipeline/nf-covflow"
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
