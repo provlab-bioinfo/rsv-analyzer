@@ -1,6 +1,6 @@
 # RSV Analysis Pipeline
 
-Automated pipeline for RSV sequencing data analysis supporting both Illumina and Nanopore platforms. Performs quality control, RSV A/B classification, consensus generation, coverage analysis, and phylogenetic classification.
+Automated pipeline for RSV tilling amplicon sequence analysis supporting both Illumina and Nanopore platforms. Performs quality control, RSV A/B classification, consensus generation, coverage analysis, and phylogenetic classification.
 
 [![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A523.04.0-23aa8f.svg)](https://www.nextflow.io/)
 [![Singularity](https://img.shields.io/badge/singularity-%E2%89%A53.8.0-1d355c.svg)](https://sylabs.io/docs/)
