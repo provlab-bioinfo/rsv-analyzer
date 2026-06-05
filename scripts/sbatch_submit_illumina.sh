@@ -137,7 +137,7 @@ echo "Results directory   : $RESULTS_DIR"
 echo "Start time          : $(date)"
 echo "=================================================="
 
-prog_base="/nfs/APL_Genomics/apps/production/rsv-analyzer_pipeline/rsv-analyzer"
+prog_base="/nfs/APL_Genomics/apps/production/rsv_pipeline/rsv-analyzer"
 # ==========================================================
 # Conda setup (activate mode, NFS-safe)
 # ==========================================================

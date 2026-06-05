@@ -137,8 +137,14 @@ def main():
     if "sample_id" in master.columns:
         sample_split = master["sample_id"].str.split("-", n=1, expand=True)
         master.insert(0, "runid", sample_split[0])
-        master.insert(1, "sample", sample_split[1] if sample_split.shape[1] > 1 else "")
-        master = master.drop(columns=["sample_id"])
+        #master.insert(1,"sample", sample_split[1] if sample_split.shape[1] > 1 else "")
+        #master = master.drop(columns=["sample_id"])
+        # Move sample_id before subgroup
+        # pop() removes the column and returns its values.
+        sample_id = master.pop("sample_id")
+
+        subgroup_idx = master.columns.get_loc("subgroup")
+        master.insert(subgroup_idx, "sample_id", sample_id)
 
     # --- 6. Save
     master.to_csv(args.out, sep="\t", index=False, na_rep="NaN")
